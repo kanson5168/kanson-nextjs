@@ -1,2 +1,2 @@
 # kanson-nextjs
-基于nextjs的后台项目
+基于nextjs+tailwindcss的练习
