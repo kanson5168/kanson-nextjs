@@ -1,16 +1,20 @@
 import Link from "next/link"
-
-export default function PostList({ posts }) {
+import { postListData } from "./types"
+interface postType {
+  posts: Array<postListData>
+}
+export default function PostList({ posts }: postType) {
   return (
     <ul>
       {
         posts.map((item) => {
-          <li key={item.id}>
-            <Link href={`/blog/${item.slug}`}>
-              {item.title}
-            </Link>
-          </li>
-
+          return (
+            <li key={item.id}>
+              <Link href={`/blog/${item.slug}`}>
+                {item.title}
+              </Link>
+            </li>
+          )
         })
       }
     </ul>
